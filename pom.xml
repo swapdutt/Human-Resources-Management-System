@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>service-registration</module>
+        <module>tax-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
