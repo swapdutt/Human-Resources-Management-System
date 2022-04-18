@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Human-Resources-Management-System.iml" filepath="$PROJECT_DIR$/.idea/Human-Resources-Management-System.iml" />
       <module fileurl="file://$PROJECT_DIR$/service-registration/service-registration.iml" filepath="$PROJECT_DIR$/service-registration/service-registration.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tax-service/tax-service.iml" filepath="$PROJECT_DIR$/tax-service/tax-service.iml" />
     </modules>
   </component>
 </project>
