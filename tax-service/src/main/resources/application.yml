@@ -13,7 +13,10 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/human-resources-management-system
     username: root
-    password: (mention the root password)
+    password: Swapdutt@1994@06@08
+  mvc:
+    pathmatch:
+      matching-strategy: ant-path-matcher
 
 #Configuring the server port
 server:
@@ -36,5 +39,5 @@ management:
     web:
       exposure:
         include:
-          - *
-  enabled-by-default: true
+          - true
+    enabled-by-default: true

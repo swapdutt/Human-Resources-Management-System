@@ -7,11 +7,9 @@ import lombok.Setter;
 @Setter
 public class UpdateTaxRequest {
 
-    private Double taxSlabRange;
-    private Double taxablePercentage;
-    private Double taxAmount;
-    private Double stateTax;
-    private Double professionalTax;
-    private Integer employeeId;
+	private Double taxSlabRange;
+	private Double taxablePercentage;
+	private Double stateTax;
+	private Double professionalTax;
 
 }
