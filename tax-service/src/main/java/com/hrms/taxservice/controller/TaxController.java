@@ -19,38 +19,40 @@ import javax.validation.constraints.NotNull;
 @Slf4j
 public class TaxController {
 
-    @Autowired
-    TaxService taxService;
+	@Autowired
+	TaxService taxService;
 
-    @GetMapping(path = "/{employeeId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Tax> findTaxRecordByTaxId (@PathVariable("employeeId") final Integer employeeId) {
-        log.info("*** Inside findTaxRecordByTaxId(employeeId) in TaxController ***");
-        return new ResponseEntity<Tax>(taxService.findTaxRecordByTaxId(employeeId), HttpStatus.OK);
-    }
+	@GetMapping(path = "/{employeeId}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Tax> findTaxRecordByTaxId(@PathVariable("employeeId") final Integer employeeId) {
+		log.info("*** Inside findTaxRecordByTaxId(employeeId) in TaxController ***");
+		return new ResponseEntity<Tax>(taxService.findTaxRecordByTaxId(employeeId), HttpStatus.OK);
+	}
 
-    @PostMapping(path = "/createTaxInfo", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Tax> createTaxInfoRecord (@RequestBody @NotNull(message = "Input request must not be NULL!!!") @Valid final CreateTaxRequest taxRequest) {
-        log.info("*** Inside createTaxInfoRecord(taxRequest) in TaxController ***");
-        return new ResponseEntity<Tax>(taxService.createTaxInfoRecord(taxRequest), HttpStatus.CREATED);
-    }
+	@PostMapping(path = "/createTaxInfo", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Tax> createTaxInfoRecord(
+			@RequestBody @NotNull(message = "Input request must not be NULL!!!") @Valid final CreateTaxRequest taxRequest) {
+		log.info("*** Inside createTaxInfoRecord(taxRequest) in TaxController ***");
+		return new ResponseEntity<Tax>(taxService.createTaxInfoRecord(taxRequest), HttpStatus.CREATED);
+	}
 
-    @PutMapping(path = "/updateTaxInfo/{employeeId}", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Tax> updateTaxInfoRecord (Integer employeeId, UpdateTaxRequest taxRequest) {
-        log.info("*** Inside updateTaxInfoRecord(employeeId, taxRequest) in TaxController ***");
-        return new ResponseEntity<Tax>(taxService.updateTaxInfoRecord(employeeId, taxRequest), HttpStatus.OK);
-    }
+	@PutMapping(path = "/updateTaxInfo/{employeeId}", consumes = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Tax> updateTaxInfoRecord(@PathVariable("employeeId") final Integer employeeId,
+			@RequestBody @NotNull(message = "Input request must not be NULL!!!") @Valid final UpdateTaxRequest taxRequest) {
+		log.info("*** Inside updateTaxInfoRecord(employeeId, taxRequest) in TaxController ***");
+		return new ResponseEntity<Tax>(taxService.updateTaxInfoRecord(employeeId, taxRequest), HttpStatus.OK);
+	}
 
-    @DeleteMapping(path = "/{taxId}")
-    public ResponseEntity<Boolean> deleteTaxRecordByTaxId(Integer taxId) {
-        log.info("*** Inside deleteTaxRecordByTaxId(taxId) in TaxController ***");
-        taxService.deleteTaxRecordByTaxId(taxId);
-        return ResponseEntity.ok(true);
-    }
+	@DeleteMapping(path = "/{taxId}")
+	public ResponseEntity<Boolean> deleteTaxRecordByTaxId(@PathVariable("taxId") final Integer taxId) {
+		log.info("*** Inside deleteTaxRecordByTaxId(taxId) in TaxController ***");
+		taxService.deleteTaxRecordByTaxId(taxId);
+		return ResponseEntity.ok(true);
+	}
 
-    @GetMapping(path = "tax-calculation/{employeeId}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Double> calculateTaxOfEmployee (Integer employeeId) {
-        log.info("*** Inside calculateTaxOfEmployee(employeeId) in TaxController ***");
-        return new ResponseEntity<>(taxService.calculateTaxOfEmployee(employeeId), HttpStatus.OK);
-    }
+	@GetMapping(path = "tax-calculation/{employeeId}", produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Double> calculateTaxOfEmployee(@PathVariable("employeeId") final Integer employeeId) {
+		log.info("*** Inside calculateTaxOfEmployee(employeeId) in TaxController ***");
+		return new ResponseEntity<>(taxService.calculateTaxOfEmployee(employeeId), HttpStatus.OK);
+	}
 
 }
