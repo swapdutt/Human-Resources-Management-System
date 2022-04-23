@@ -6,11 +6,16 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(HttpStatus.NOT_FOUND)
 public class DepartmentEntityNotFoundException extends ServiceException {
 
-    public DepartmentEntityNotFoundException(String errorMessage) {
-        super(errorMessage);
-    }
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-    public DepartmentEntityNotFoundException(String errorMessage, Throwable errorObject) {
-        super(errorMessage, errorObject);
-    }
+	public DepartmentEntityNotFoundException(String errorMessage) {
+		super(errorMessage);
+	}
+
+	public DepartmentEntityNotFoundException(String errorMessage, Throwable errorObject) {
+		super(errorMessage, errorObject);
+	}
 }

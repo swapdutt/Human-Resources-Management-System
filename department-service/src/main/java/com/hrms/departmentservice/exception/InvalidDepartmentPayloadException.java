@@ -6,11 +6,16 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 @ResponseStatus(HttpStatus.BAD_REQUEST)
 public class InvalidDepartmentPayloadException extends ServiceException {
 
-    public InvalidDepartmentPayloadException(String errorMessage) {
-        super(errorMessage);
-    }
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 
-    public InvalidDepartmentPayloadException(String errorMessage, Throwable errorObject) {
-        super(errorMessage, errorObject);
-    }
+	public InvalidDepartmentPayloadException(String errorMessage) {
+		super(errorMessage);
+	}
+
+	public InvalidDepartmentPayloadException(String errorMessage, Throwable errorObject) {
+		super(errorMessage, errorObject);
+	}
 }
