@@ -17,7 +17,7 @@ spring:
 
 #Configuring the server port
 server:
-  port: 8500
+  port: 8600
 
 #Eureka related properties
 eureka:
