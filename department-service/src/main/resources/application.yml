@@ -1,0 +1,40 @@
+#Naming the application & Database related properties
+spring:
+  application:
+    name: department-service
+  jpa:
+    generate-ddl: true
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        ddl-auto: update
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/human-resources-management-system
+    username: root
+    password: Swapdutt@1994@06@08
+
+#Configuring the server port
+server:
+  port: 8600
+
+#Eureka related properties
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#Spring Actuator related properties
+management:
+  endpoint:
+    shutdown:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include:
+          - true
+    enabled-by-default: true
