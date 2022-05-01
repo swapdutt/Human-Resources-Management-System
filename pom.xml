@@ -7,6 +7,7 @@
         <module>service-registration</module>
         <module>tax-service</module>
         <module>department-service</module>
+        <module>gateway-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
