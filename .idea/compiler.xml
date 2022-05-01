@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="service-registration" />
-        <module name="department-service" />
         <module name="tax-service" />
+        <module name="department-service" />
+        <module name="gateway-service" />
       </profile>
     </annotationProcessing>
   </component>
@@ -17,6 +18,7 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Human-Resources-Management-System" options="-parameters" />
       <module name="department-service" options="-parameters" />
+      <module name="gateway-service" options="-parameters" />
       <module name="service-registration" options="-parameters" />
       <module name="tax-service" options="-parameters" />
     </option>
