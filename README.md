@@ -20,7 +20,7 @@ In this project, only the back-end of the system is going to be implemented, alt
 * Authentication and Recruitment services yet to be designed.
 * MQ designing and implementation for sending alerts to the candidate and HRs when the candidate is selected, on-boarded or rejected is still in pending stage.
 ## Services in the project:
-Each service is a separate microservice in the application which comprises 10 different microservice.
+Each service is a separate microservice in the application.
 1. eureka-discovery-service
 2. config-server
 3. gateway-service
@@ -47,13 +47,13 @@ Each service is a separate microservice in the application which comprises 10 di
 ## APIs used in the project:
 (Currently in development. Will be updated once the development is completed.)
 ## Tech Stack used in the project:
-1. Java 11
-2. SpringBoot
-3. Spring MVC
+1. Java 21
+2. Spring 6
+3. Spring Boot 3
 4. Spring Security
 5. Spring Data JPA
 6. Spring Cloud
 7. Spring Batch
-8. RabbitMQ
+8. RabbitMQ/Apache Kafka
 9. MySQL database
 10. Lombok

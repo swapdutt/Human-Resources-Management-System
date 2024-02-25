@@ -16,7 +16,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="Human-Resources-Management-System" options="-parameters" />
+      <module name="Human-Resources-Management-System" options="" />
       <module name="department-service" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
       <module name="service-registration" options="-parameters" />
