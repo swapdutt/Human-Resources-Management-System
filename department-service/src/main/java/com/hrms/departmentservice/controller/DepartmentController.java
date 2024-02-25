@@ -11,8 +11,8 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotNull;
 
 @RestController
 @RequestMapping("/hrms/api/v1/department")
@@ -29,7 +29,9 @@ public class DepartmentController {
     }
 
     @PostMapping(path = "/createDepartmentInfo", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<Department> createDepartmentInfoRecord(@RequestBody @NotNull(message = "Input request must not be NULL!!!") @Valid final CreateDepartmentRequest request) {
+    public ResponseEntity<Department> createDepartmentInfoRecord(@RequestBody
+                                                                     @NotNull(message = "Input request must not be NULL!!!")
+                                                                     @Valid final CreateDepartmentRequest request) {
         log.info("*** Inside createDepartmentInfoRecord(request) in DepartmentController ***");
         return new ResponseEntity<>(departmentService.createDepartmentInfoRecord(request), HttpStatus.CREATED);
     }

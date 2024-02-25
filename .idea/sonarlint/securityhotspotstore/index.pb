@@ -41,3 +41,15 @@ w
 G.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec,8/6/863e0292fd7e9b3e74dafd6cc01f73ba76346482
 Å
 Q.idea/sonarlint/securityhotspotstore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec,2/c/2cabb939da04d3de3a200bf2b575690e1a16316d
+s
+Ctax-service/src/main/java/com/hrms/taxservice/model/entity/Tax.java,e/b/eb724d19394b7e3632eb9ac3423e7c0c445ed6c1
+{
+Ktax-service/src/main/java/com/hrms/taxservice/controller/TaxController.java,0/8/0807ebfde5223d0b3203e43565c83784c7c4292c
+x
+Htax-service/src/main/java/com/hrms/taxservice/TaxServiceApplication.java,6/3/63c44f0bfbee4b25f48095d6814e3583f84ccdb2
+à
+Xdepartment-service/src/main/java/com/hrms/departmentservice/model/entity/Department.java,e/2/e241ff500f77f0023f94c0d63a856d86880f799b
+ç
+]department-service/src/main/java/com/hrms/departmentservice/DepartmentServiceApplication.java,5/5/55694b8aa0fde4d7af0611fe9c44b3d2174a6241
+ê
+`department-service/src/main/java/com/hrms/departmentservice/controller/DepartmentController.java,d/6/d646b2e735701eb0809d175dfcad1a207677187d

@@ -3,8 +3,7 @@ package com.hrms.taxservice.model.entity;
 import com.hrms.taxservice.constants.ErrorMessageConstants;
 import lombok.*;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import jakarta.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -33,7 +32,7 @@ public class Tax {
     private Double professionalTax;
 
     @Column(name = "employee_id")
-    @NotNull(message = ErrorMessageConstants.EMPLOYEE_ID_NOT_BLANK)
+    // @NotNull(message = ErrorMessageConstants.EMPLOYEE_ID_NOT_BLANK)
     private Integer employeeId;
 
     public Tax(final Tax tax) {
