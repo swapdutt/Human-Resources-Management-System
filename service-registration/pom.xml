@@ -14,7 +14,7 @@
     <description>Eureka Service Registration for Human Resources Management System</description>
 
     <properties>
-        <spring.cloud-version>2021.0.1</spring.cloud-version>
+        <spring.cloud-version>2023.0.3</spring.cloud-version>
     </properties>
 
     <dependencies>
@@ -22,6 +22,16 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.apache.httpcomponents</groupId>
+                    <artifactId>httpclient</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents.client5</groupId>
+            <artifactId>httpclient5</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

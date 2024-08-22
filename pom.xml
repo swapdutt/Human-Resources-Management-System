@@ -5,14 +5,12 @@
     <packaging>pom</packaging>
     <modules>
         <module>service-registration</module>
-        <module>tax-service</module>
-        <module>department-service</module>
         <module>gateway-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.2.3</version>
+        <version>3.3.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -28,7 +26,7 @@
         <maven.complier.target>${java.version}</maven.complier.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.build.outputEncoding>UTF-8</project.build.outputEncoding>
-        <openapi.version>2.3.0</openapi.version>
+        <openapi.version>2.6.0</openapi.version>
     </properties>
 
     <dependencies>
