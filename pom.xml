@@ -5,7 +5,6 @@
     <packaging>pom</packaging>
     <modules>
         <module>service-registration</module>
-        <module>gateway-service</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
