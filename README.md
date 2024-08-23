@@ -16,26 +16,22 @@ In this project, only the back-end of the system is going to be implemented, alt
 ## Services in the project:
 Each service is a separate microservice in the application.
 1. service-registration
-2. api-gateway-service
-3. authentication-service
-4. employee-service
-5. recruitment-service
-6. payroll-service
-7. department-service 
-8. hr-queries-service 
-9. recruitment-service 
-10. misc-service
+2. api-gateway-authentication-service
+3. employee-service 
+4. recruitment-service 
+5. payroll-processing-service 
+6. attendance-tracking-service 
+7. hr-queries-service 
+8. misc-service
 ## Ports used by different mirco-services:
 1. service-registration : **8761**
-2. api-gateway-service : **8080**
-3. authentication-service : **8100**
-4. employee-service : **8200**
-5. recruitment-service : **8300**
-6. payroll-service : **8400**
-7. department-service : **8500**
-8. hr-queries-service : **8600**
-9. recruitment-service : **8700**
-10. misc-service : **8800**
+2. api-gateway-authentication-service : **8080**
+3. employee-service : **8100**
+4. recruitment-service : **8200**
+5. payroll-processing-service : **8300**
+6. attendance-tracking-service : **8400**
+7. hr-queries-service : **8500**
+8. misc-service : **8600**
 ## APIs used in the project:
 (Currently in development. Will be updated once the development is completed.)
 ## Tech Stack used in the project:
